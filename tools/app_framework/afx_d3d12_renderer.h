@@ -1163,5 +1163,5 @@ protected:
 
 #ifdef RPS_DX12_AGILITY_SDK_VER
 extern "C" __declspec(dllexport) const UINT D3D12SDKVersion = RPS_DX12_AGILITY_SDK_VER;
-extern "C" __declspec(dllexport) const char* D3D12SDKPath   = u8".\\D3D12\\";
+extern "C" __declspec(dllexport) const char* D3D12SDKPath   = reinterpret_cast<const char*>(u8".\\D3D12\\");
 #endif  //ifdef RPS_DX12_AGILITY_SDK_VER
